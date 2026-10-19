@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>查理和巧克力工厂 · 剧情时间线</title>
+  <meta name="description" content="2005 年蒂姆·波顿《查理和巧克力工厂》剧情时间线·人物登场·中英双语。">
+  <link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%23140a08'/><rect x='10' y='22' width='44' height='20' rx='4' fill='none' stroke='%23e9b949' stroke-width='3' stroke-dasharray='5 4'/><circle cx='22' cy='32' r='3' fill='%23e9b949'/><circle cx='32' cy='32' r='3' fill='%23e9b949'/><circle cx='42' cy='32' r='3' fill='%23e9b949'/></svg>">
+  <style>
+    :root {
+      --bg: #140a08;
+      --card: #241210;
+      --gold: #e9b949;
+      --gold-soft: #f2d38a;
+      --cream: #f7ecd8;
+      --dim: rgba(247, 236, 216, 0.62);
+      --font-display: "Songti SC", "STSong", "SimSun", serif;
+      --font-body: "PingFang SC", "Hiragino Sans GB", -apple-system, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      display: grid;
+      place-items: center;
+      padding: 28px;
+      color: var(--cream);
+      font-family: var(--font-body);
+      background:
+        radial-gradient(900px 460px at 15% -5%, rgba(107, 63, 160, 0.3), transparent 60%),
+        radial-gradient(760px 420px at 90% 5%, rgba(74, 18, 38, 0.55), transparent 60%),
+        radial-gradient(2px 2px at 22% 30%, rgba(233, 185, 73, 0.5) 50%, transparent 51%),
+        radial-gradient(2px 2px at 78% 20%, rgba(233, 185, 73, 0.4) 50%, transparent 51%),
+        radial-gradient(2px 2px at 44% 74%, rgba(233, 185, 73, 0.3) 50%, transparent 51%),
+        linear-gradient(180deg, #190d0a, #100706);
+      background-attachment: fixed;
+    }
+    .card {
+      width: min(460px, 100%);
+      text-align: center;
+      padding: 46px 36px 36px;
+      border-radius: 18px;
+      border: 1px dashed rgba(233, 185, 73, 0.4);
+      background:
+        radial-gradient(160% 120% at 10% 0%, rgba(107, 63, 160, 0.14), transparent 55%),
+        linear-gradient(165deg, #2a1711, #1b0e0b);
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+    }
+    .kicker {
+      margin: 0 0 10px;
+      font-family: var(--font-display);
+      letter-spacing: 0.3em;
+      font-size: 12px;
+      color: var(--gold-soft);
+      opacity: 0.8;
+    }
+    h1 {
+      margin: 0 0 6px;
+      font-family: var(--font-display);
+      font-size: clamp(26px, 6vw, 34px);
+      letter-spacing: 0.06em;
+      color: var(--gold-soft);
+      line-height: 1.3;
+      text-shadow: 0 0 36px rgba(233, 185, 73, 0.2);
+    }
+    .sub {
+      margin: 0 0 26px;
+      font-size: 13px;
+      color: var(--dim);
+      letter-spacing: 0.08em;
+    }
+    #state {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 24px;
+      font-size: 14px;
+      color: var(--cream);
+    }
+    .dot {
+      width: 9px; height: 9px; border-radius: 50%;
+      background: #63c57a;
+      box-shadow: 0 0 10px rgba(99, 197, 122, 0.8);
+      flex: none;
+      animation: pulse 2s ease infinite;
+    }
+    .dot.off { background: #b5503c; box-shadow: 0 0 10px rgba(181, 80, 60, 0.7); animation: none; }
+    .dot.wait { background: var(--gold); box-shadow: 0 0 10px rgba(233, 185, 73, 0.7); }
+    @keyframes pulse { 50% { opacity: 0.45; } }
+    #hint {
+      display: none;
+      margin: 18px 0 0;
+      font-size: 12.5px;
+      line-height: 1.9;
+      color: rgba(247, 236, 216, 0.55);
+      text-align: left;
+    }
+    .go {
+      display: none;
+      margin: 24px auto 0;
+      padding: 13px 46px;
+      border-radius: 999px;
+      border: 1px solid rgba(233, 185, 73, 0.7);
+      background: radial-gradient(circle at 35% 20%, rgba(233, 185, 73, 0.4), rgba(233, 185, 73, 0.1));
+      color: #1b0e0b;
+      font-weight: 700;
+      font-size: 16px;
+      letter-spacing: 0.2em;
+      text-decoration: none;
+      box-shadow: 0 10px 28px rgba(233, 185, 73, 0.22);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .go:hover { transform: translateY(-2px); box-shadow: 0 14px 34px rgba(233, 185, 73, 0.32); }
+    footer {
+      margin-top: 30px;
+      padding-top: 16px;
+      border-top: 1px dashed rgba(233, 185, 73, 0.16);
+      font-size: 11.5px;
+      line-height: 1.9;
+      color: rgba(247, 236, 216, 0.42);
+      text-align: left;
+    }
+    footer strong { color: var(--gold-soft); font-weight: 600; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <p class="kicker">2005 · TIM BURTON</p>
+    <h1>查理和巧克力工厂</h1>
+    <p class="sub">Charlie and the Chocolate Factory · 剧情时间线</p>
+    <p id="state"><span class="dot wait"></span>正在看看门开了没有…</p>
+    <p id="hint"></p>
+    <a class="go" id="go" href="#" target="_blank" rel="noopener">进入网站</a>
+    <footer>
+      这是一份影迷向的非商业页面：剧情与人物资料整理自百度百科词条，剧照、海报版权归华纳兄弟影片公司及相关权利人所有。<br>
+      本页由一台个人电脑提供，<strong>仅在「开门」时才能进入</strong>；进不去多半是主人不在电脑边，或电脑正在休息。<br>
+      页面里的剧照为 2005 年电影版《查理和巧克力工厂》。
+    </footer>
+  </div>
+<script>
+(function () {
+  // 当前隧道地址存在 secret gist 里，由 bin/start.sh / bin/stop.sh 自动更新。
+  // 优先走 api.github.com（内容最新），失败退回 CDN 直链（可能略旧）。
+  // 下面两行由 bin/setup.sh 自动改写，别手改。
+  var GIST_ID = '78f7b8c34f5a2bac4ec8eb9d98e321c9';
+  var GIST_OWNER = 'ree-29lab';
+  var NOW_API = 'https://api.github.com/gists/' + GIST_ID;
+  var NOW_RAW = 'https://gist.githubusercontent.com/' + GIST_OWNER + '/' + GIST_ID + '/raw/now.json';
+
+  var state = document.getElementById('state');
+  var hint = document.getElementById('hint');
+  var go = document.getElementById('go');
+
+  function show(text, extra) {
+    state.innerHTML = '<span class="dot off"></span>' + text;
+    hint.style.display = 'none';
+    if (extra) { hint.textContent = extra; hint.style.display = 'block'; }
+  }
+
+  function fromApi() {
+    return fetch(NOW_API + '?t=' + Date.now(), {
+      cache: 'no-store',
+      headers: { Accept: 'application/vnd.github+json' }
+    })
+      .then(function (response) {
+        if (!response.ok) throw new Error('api ' + response.status);
+        return response.json();
+      })
+      .then(function (gist) { return JSON.parse(gist.files['now.json'].content); });
+  }
+
+  function fromRaw() {
+    return fetch(NOW_RAW + '?t=' + Date.now(), { cache: 'no-store' })
+      .then(function (response) {
+        if (!response.ok) throw new Error('raw ' + response.status);
+        return response.json();
+      });
+  }
+
+  // 先探一下门通不通：隧道地址刚换过时，有些网络会短暂解析不到，
+  // 直接跳过去会看到浏览器的报错页，不如在这里说清楚并给个按钮。
+  function probe(target) {
+    return fetch(target + 'index.html', { mode: 'no-cors', cache: 'no-store' })
+      .then(function () {
+        state.innerHTML = '<span class="dot"></span>门开着，正在带你进去…';
+        go.href = target;
+        go.textContent = '进 入 网 站';
+        go.style.display = 'inline-block';
+        setTimeout(function () { location.replace(target); }, 700);
+      })
+      .catch(function () {
+        go.href = target;
+        go.textContent = '还是想试试';
+        go.style.display = 'inline-block';
+        show('页面暂时连不上。', '可能是主人的电脑刚睡醒、隧道刚断，也可能是你这边网络的问题。等半分钟再点「还是想试试」；一直不行，就找给你链接的人。');
+      });
+  }
+
+  fromApi()
+    .catch(fromRaw)
+    .then(function (info) {
+      if (!info || !info.online || !info.url) {
+        show('现在没开门。', '这个页面要在主人「开门」的时候才能进入。可以过一会儿再来，或找给你链接的人要一下。');
+        return;
+      }
+      probe(info.url.replace(/\/+$/, '/').replace(/\/$/, ''));
+    })
+    .catch(function () {
+      show('读不到开门状态。', '可能是网络问题。刷新一下再试；还不行就找给你链接的人。');
+    });
+})();
+</script>
+</body>
+</html>
