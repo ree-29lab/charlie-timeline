@@ -180,7 +180,8 @@
 
   // 先探一下门通不通：隧道地址刚换过时，有些网络会短暂解析不到，
   // 直接跳过去会看到浏览器的报错页，不如在这里说清楚并给个按钮。
-  function probe(target) {
+  function probe(base) {
+    var target = base.replace(/\/+$/, '') + '/';
     return fetch(target + 'index.html', { mode: 'no-cors', cache: 'no-store' })
       .then(function () {
         state.innerHTML = '<span class="dot"></span>门开着，正在带你进去…';
@@ -204,7 +205,7 @@
         show('现在没开门。', '这个页面要在主人「开门」的时候才能进入。可以过一会儿再来，或找给你链接的人要一下。');
         return;
       }
-      probe(info.url.replace(/\/+$/, '/').replace(/\/$/, ''));
+      probe(info.url);
     })
     .catch(function () {
       show('读不到开门状态。', '可能是网络问题。刷新一下再试；还不行就找给你链接的人。');
